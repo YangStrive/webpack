@@ -25,7 +25,7 @@ const setMPA = () =>{
             new htmlWebpackPlugin({
                 template: path.join(__dirname, `src/${pageName}/${pageName}.html`),
                 filename: `${pageName}.html`,
-                chunks: [pageName],
+                chunks: ['common',pageName],
                 inject: true,
                 minify:{
                     html5:true,
@@ -48,7 +48,7 @@ module.exports = {
         path:path.join(__dirname,'dist'),
         filename:'[name]_[chunkhash:8].js'
     },
-    mode:'none',
+    mode:'production',
     module:{
         rules:[
             {
@@ -126,7 +126,7 @@ module.exports = {
                 common: {
                     name: "common",
                     chunks: "all",
-                    minChunks: 2
+                    minChunks: 8
                 }
             }
         }
