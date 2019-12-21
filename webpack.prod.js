@@ -49,11 +49,15 @@ module.exports = {
         filename:'[name]_[chunkhash:8].js'
     },
     mode:'production',
+    /*  mode 设置为 production 会默认开启tree shaking 和 scope hoisting
+        tree-shaking是一个术语，是production模式打包自带优化，通常用于打包时移除JavaScript中未引用的代码 
+        scope hoisting 使webpack 打包模块后的代码 不用每个模块一个闭包 合并到一起
+    */
     module:{
         rules:[
             {
                 test:/.js$/,
-                use:'babel-loader'
+                use:['babel-loader','eslint-loader']
             },
             {
                 test:/.css$/,

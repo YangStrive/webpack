@@ -1,7 +1,16 @@
+/*
+ * @Author: your name
+ * @Date: 2019-12-10 14:48:23
+ * @LastEditTime : 2019-12-21 17:29:54
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /webPack/src/index/index.js
+ */
+
 import  '../../static/less/style.css';
 import  '../../static/less/style-less.less';
 import {ws} from '../../uiti/uiti';
-import commons from '../../uiti/common';
+//import commons from '../../uiti/common';
 let commonjs  =  require('../../uiti/commonjs');
 import pyy  from '../../static/img/3.png';
 
@@ -22,3 +31,5 @@ imgDom2.src = icon;
 console.log(ws)
 //console.log(sd())
 console.log(commonjs.a)
+let m = 3;
+if(m == 10) console.log(9999)
