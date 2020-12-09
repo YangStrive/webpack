@@ -11,7 +11,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');   //导入插件
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');   //导入清理打包目录
 //遍历文件目录匹配文件
 const glob = require('glob')
-
+//entry 打包入口，可以是单入口也可以是多入口，单入口主要是单页应用。
 const setMPA = () =>{
     const entry = {};
     const htmlWebpackPlugins = [];
@@ -44,6 +44,7 @@ const setMPA = () =>{
 const {entry,htmlWebpackPlugins} =  setMPA();
 module.exports = {
     entry:entry,
+    //output 输出资源
     output:{
         path:path.join(__dirname,'dist'),
         filename:'[name]_[chunkhash:8].js'

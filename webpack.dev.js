@@ -84,7 +84,10 @@ module.exports = {
             // }
         ]
     },
-    watch:false,//默认为false
+    watch:false,//开启文件监听 默认为false，
+    //文件修改后会自动构建，node会记录文件最后修改时间，如果某一个文件修改，
+    //将最后修改时间进行对比，判断是否修改，如果修改则等待一段时间，将多个修改的文件列表提交进行编译
+    //
     //watch 为true时 watchOptions 配置才有意义
     watchOptions:{
         //不监听的文件或者文件夹，默认为空
